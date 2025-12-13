@@ -1,1 +1,2 @@
-# Flutter-Python-Teaching-Template
+# Flutter-Python-Teaching-黑白棋
+遊戲一開始玩家與電腦各有兩子
