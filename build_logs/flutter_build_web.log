@@ -1,0 +1,81 @@
+[  +23 ms] Unable to locate an Android SDK.
+[   +2 ms] executing: uname -m
+[   +3 ms] Exit code 0 from: uname -m
+[        ] x86_64
+[  +28 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +1 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[  +40 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+[        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[   +3 ms] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+[        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+[  +45 ms] Skipping pub get: version match.
+[ +120 ms] This app is using a deprecated version of the Android embedding.
+           To avoid unexpected runtime failures, or future build failures, try to migrate this app to the V2 embedding.
+           Take a look at the docs for migrating an app: https://github.com/flutter/flutter/wiki/Upgrading-pre-1.12-Android-projects
+[   +1 ms] Generating /workspaces/Flutter-Python-Teaching-Template/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+[  +59 ms] generated_plugin_registrant.dart not found. Skipping.
+[   +2 ms] Compiling lib/main.dart for the Web...
+[   +9 ms] Initializing file store
+[   +5 ms] Done initializing file store
+[  +90 ms] Skipping target: web_entrypoint
+[   +1 ms] Skipping target: gen_localizations
+[   +2 ms] web_static_assets: Starting due to {InvalidatedReasonKind.outputMissing: The following outputs were missing: /workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/flutter.js,/workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/canvaskit/chromium/canvaskit.js,/workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/canvaskit/chromium/canvaskit.wasm,/workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/canvaskit/skwasm.wasm,/workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/canvaskit/canvaskit.js,/workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/canvaskit/canvaskit.wasm,/workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/canvaskit/skwasm.js,/workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/canvaskit/skwasm.worker.js}
+[ +273 ms] dart2js: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: /workspaces/Flutter-Python-Teaching-Template/.dart_tool/package_config_subset,/workspaces/Flutter-Python-Teaching-Template/.dart_tool/package_config.json}
+[   +6 ms] executing: /opt/flutter/bin/cache/dart-sdk/bin/dart --disable-dart-dev /opt/flutter/bin/cache/dart-sdk/bin/snapshots/dart2js.dart.snapshot --platform-binaries=/opt/flutter/bin/cache/flutter_web_sdk/kernel --invoker=flutter_tool -Ddart.vm.product=true -DFLUTTER_WEB_AUTO_DETECT=true -DFLUTTER_WEB_CANVASKIT_URL=https://www.gstatic.com/flutter-canvaskit/a794cf2681c6c9fe7b260e0e84de96298dc9c18b/ --native-null-assertions --no-source-maps -o /workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/app.dill --packages=.dart_tool/package_config.json --cfe-only /workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/main.dart
+[   +1 ms] web_static_assets: Complete
+[+13814 ms] Compiled 35,868,296 input bytes (27,857,259 characters source) to 51,807,600 kernel bytes in 13.4 seconds using 618.516 MB of memory
+            Dart file .dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/main.dart compiled to dill: .dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/app.dill.
+[        ] executing: /opt/flutter/bin/cache/dart-sdk/bin/dart --disable-dart-dev /opt/flutter/bin/cache/dart-sdk/bin/snapshots/dart2js.dart.snapshot --platform-binaries=/opt/flutter/bin/cache/flutter_web_sdk/kernel --invoker=flutter_tool -Ddart.vm.product=true -DFLUTTER_WEB_AUTO_DETECT=true -DFLUTTER_WEB_CANVASKIT_URL=https://www.gstatic.com/flutter-canvaskit/a794cf2681c6c9fe7b260e0e84de96298dc9c18b/ --native-null-assertions --no-source-maps -O4 -o /workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/main.dart.js /workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/app.dill
+[+18718 ms] Hint: When run on the command-line, the compiled output might require a preamble file located in:
+              <sdk>/lib/_internal/js_runtime/lib/preambles.
+            file:///opt/flutter/packages/flutter/lib/src/widgets/widget_inspector.dart:291:11:
+            Hint: Overriding 'noSuchMethod' causes the compiler to generate more code and prevents the compiler from doing some optimizations.
+            Consider removing this 'noSuchMethod' implementation.
+              dynamic noSuchMethod(Invocation invocation) {
+                      ^
+            Compiled 67,716,344 input bytes (27,857,259 characters source) to 1,861,077 characters JavaScript in 18.3 seconds using 762.152 MB of memory
+[  +25 ms] dart2js: Complete
+[  +90 ms] web_release_bundle: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: /workspaces/Flutter-Python-Teaching-Template/.dart_tool/package_config.json,/workspaces/Flutter-Python-Teaching-Template/pubspec.yaml,/workspaces/Flutter-Python-Teaching-Template/pubspec.yaml,/workspaces/Flutter-Python-Teaching-Template/web/index.html,/workspaces/Flutter-Python-Teaching-Template/build/web/main.dart.js,build/web/assets/fonts/MaterialIcons-Regular.otf,build/web/assets/AssetManifest.json,build/web/assets/AssetManifest.bin,build/web/assets/FontManifest.json,build/web/assets/NOTICES,build/web/index.html}
+[ +101 ms] shaderc command: [/opt/flutter/bin/cache/artifacts/engine/linux-x64/impellerc, --sksl, --iplr, --json, --sl=build/web/assets/shaders/ink_sparkle.frag, --spirv=build/web/assets/shaders/ink_sparkle.frag.spirv, --input=/opt/flutter/packages/flutter/lib/src/material/shaders/ink_sparkle.frag, --input-type=frag, --include=/opt/flutter/packages/flutter/lib/src/material/shaders, --include=/opt/flutter/bin/cache/artifacts/engine/linux-x64/shader_lib]
+[  +25 ms] Running command: /opt/flutter/bin/cache/dart-sdk/bin/dart --disable-dart-dev /opt/flutter/bin/cache/artifacts/engine/linux-x64/const_finder.dart.snapshot --kernel-file /workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/4578805de85c7ee9cd08323f8e070133/app.dill --class-library-uri package:flutter/src/widgets/icon_data.dart --class-name IconData --annotation-class-name _StaticIconProvider --annotation-class-library-uri package:flutter/src/widgets/icon_data.dart
+[+1909 ms] Running font-subset: /opt/flutter/bin/cache/artifacts/engine/linux-x64/font-subset build/web/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf /home/codespace/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8/assets/CupertinoIcons.ttf, using codepoints 62629 62419 62415 62318 optional:32
+[        ] Running font-subset: /opt/flutter/bin/cache/artifacts/engine/linux-x64/font-subset build/web/assets/fonts/MaterialIcons-Regular.otf /opt/flutter/bin/cache/artifacts/material_fonts/MaterialIcons-Regular.otf, using codepoints 59020 58644 57490 57491 57706 58332 58727 57496 57694 57695 57657 57882 57504 61453 57634 57498 57926 61061 61060 62834 62833 59283 59282 57499 57500 61069 61068 62842 62841 59291 59290 58011 58012 61575 61576 63348 63349 59797 59798 58372 58370 61930 61927 63708 63705 60157 60154 58771 58189 62328 61752 983402 63526 60555 59975 57704 57502 58814 58813 57846 57862 57686 61764 57402 optional:32
+[  +15 ms] Font asset "CupertinoIcons.ttf" was tree-shaken, reducing it from 257628 to 1172 bytes (99.5% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+[   +2 ms] Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 7776 bytes (99.5% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+[   +5 ms] web_release_bundle: Complete
+[ +132 ms] web_service_worker: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: build/web/assets/NOTICES,build/web/assets/AssetManifest.json,build/web/assets/AssetManifest.bin,build/web/assets/FontManifest.json,build/web/index.html,build/web/flutter_service_worker.js}
+[ +203 ms] web_service_worker: Complete
+[   +1 ms] Persisting file store
+[   +5 ms] Done persisting file store
+[  +20 ms] Compiling lib/main.dart for the Web... (completed in 35.4s)
+[   +2 ms] "flutter web" took 35,759ms.
+[   +8 ms] ensureAnalyticsSent: 0ms
+[        ] Running 0 shutdown hooks
+[        ] Shutdown hooks complete
+[        ] exiting with code 0
