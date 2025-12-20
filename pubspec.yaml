@@ -1,0 +1,17 @@
+name: reversi_app
+description: A small Reversi (Othello) demo to run in the container
+publish_to: "none"
+version: 0.0.1
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
