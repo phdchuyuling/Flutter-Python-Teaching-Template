@@ -1,0 +1,84 @@
+# Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+*.iml
+*.lock
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+
+# Build
+build/
+dist/
+*.deb
+*.rpm
+*.apk
+*.app
+*.ipa
+
+# Dependencies
+pubspec.lock
+.pub/
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+
+# Logs
+*.log
+*.old
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+.tmp/
+tmp/
+temp/
+
+# Generated files
+generated/
+*.generated.dart
+
+# Test
+.test_coverage/
+coverage/
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Node
+node_modules/
+npm-debug.log
+
+# Local development
+local.properties
+*.local
+.local/
