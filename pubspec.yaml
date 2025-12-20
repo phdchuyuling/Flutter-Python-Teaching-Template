@@ -1,0 +1,20 @@
+name: flutter_python_teaching_template
+description: A tiny Flutter app for currency conversion for testing in web-server.
+publish_to: 'none'
+version: 0.0.1
+environment:
+  sdk: ">=2.18.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.6
+  html: ^0.15.0
+  intl: ^0.18.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
