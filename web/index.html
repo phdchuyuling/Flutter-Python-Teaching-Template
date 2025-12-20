@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="Reversi Game - Teaching Template for Flutter">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Reversi">
+    <title>Reversi - 黑白棋</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#1967D2">
+    <meta name="color-scheme" content="light dark">
+    <script>
+      var serviceWorkerVersion = null;
+      var scriptLoaded = false;
+      window.addEventListener('load', function() {
+        if (scriptLoaded) return;
+        scriptLoaded = true;
+        var scriptTag = document.createElement('script');
+        scriptTag.src = 'flutter_bootstrap.js';
+        document.head.appendChild(scriptTag);
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Flutter will render here -->
+  </body>
+</html>

@@ -1,0 +1,124 @@
+nohup: ignoring input
+
+Compiling lib/main.dart for the Web...                          
+Target dart2js failed: ProcessException: Process exited abnormally with exit code 1:
+lib/main.dart:53:13:
+Error: The method 'reset' isn't defined for the class 'Game'.
+ - 'Game' is from 'package:reversi/game.dart' ('lib/game.dart').
+      _game.reset();
+            ^^^^^
+lib/main.dart:62:21:
+Error: The method 'undoTwoMoves' isn't defined for the class 'Game'.
+ - 'Game' is from 'package:reversi/game.dart' ('lib/game.dart').
+    bool ok = _game.undoTwoMoves();
+                    ^^^^^^^^^^^^
+lib/main.dart:94:16:
+Error: This expression has type 'void' and can't be used.
+    if (!_game.makeMove(idx, 1)) return;
+               ^
+lib/main.dart:110:15:
+Error: The method 'isGameOver' isn't defined for the class 'Game'.
+ - 'Game' is from 'package:reversi/game.dart' ('lib/game.dart').
+    if (_game.isGameOver()) {
+              ^^^^^^^^^^
+lib/main.dart:114:23:
+Error: The method 'legalMoves' isn't defined for the class 'Game'.
+ - 'Game' is from 'package:reversi/game.dart' ('lib/game.dart').
+    var moves = _game.legalMoves(-1);
+                      ^^^^^^^^^^
+lib/main.dart:137:22:
+Error: The method 'chooseMove' isn't defined for the class 'SimpleAI'.
+ - 'SimpleAI' is from 'package:reversi/ai.dart' ('lib/ai.dart').
+    int aiMove = _ai.chooseMove(_game);
+                     ^^^^^^^^^^
+lib/main.dart:140:27:
+Error: The method 'flipsForMove' isn't defined for the class 'Game'.
+ - 'Game' is from 'package:reversi/game.dart' ('lib/game.dart').
+      var flipped = _game.flipsForMove(aiMove, -1);
+                          ^^^^^^^^^^^^
+lib/main.dart:145:15:
+Error: The method 'isGameOver' isn't defined for the class 'Game'.
+ - 'Game' is from 'package:reversi/game.dart' ('lib/game.dart').
+    if (_game.isGameOver()) {
+              ^^^^^^^^^^
+lib/main.dart:197:20:
+Error: The method 'score' isn't defined for the class 'Game'.
+ - 'Game' is from 'package:reversi/game.dart' ('lib/game.dart').
+    var sc = _game.score();
+                   ^^^^^
+lib/main.dart:212:24:
+Error: A value of type 'List<int>' can't be assigned to a variable of type 'int'.
+ - 'List' is from 'dart:core'.
+    int v = _game.board[idx];
+                       ^
+lib/main.dart:221:15:
+Error: The method 'flipsForMove' isn't defined for the class 'Game'.
+ - 'Game' is from 'package:reversi/game.dart' ('lib/game.dart').
+        _game.flipsForMove(idx, _game.currentPlayer).isNotEmpty &&
+              ^^^^^^^^^^^^
+lib/main.dart:324:53:
+Error: Member not found: 'size'.
+                        itemCount: Game.size * Game.size,
+                                                    ^^^^
+lib/main.dart:324:41:
+Error: Member not found: 'size'.
+                        itemCount: Game.size * Game.size,
+                                        ^^^^
+lib/main.dart:327:54:
+Error: Member not found: 'size'.
+                                crossAxisCount: Game.size),
+                                                     ^^^^
+lib/main.dart:279:20:
+Error: The method 'score' isn't defined for the class 'Game'.
+ - 'Game' is from 'package:reversi/game.dart' ('lib/game.dart').
+    var sc = _game.score();
+                   ^^^^^
+lib/main.dart:415:39:
+Error: The method 'setDifficulty' isn't defined for the class 'SimpleAI'.
+ - 'SimpleAI' is from 'package:reversi/ai.dart' ('lib/ai.dart').
+                                  _ai.setDifficulty(val);
+                                      ^^^^^^^^^^^^^
+Error: Compilation failed.
+  Command: /opt/flutter/flutter/bin/cache/dart-sdk/bin/dart --disable-dart-dev /opt/flutter/flutter/bin/cache/dart-sdk/bin/snapshots/dart2js.dart.snapshot --platform-binaries=/opt/flutter/flutter/bin/cache/flutter_web_sdk/kernel --invoker=flutter_tool -Ddart.vm.product=true -DFLUTTER_WEB_AUTO_DETECT=false -DFLUTTER_WEB_USE_SKIA=true -DFLUTTER_WEB_CANVASKIT_URL=https://www.gstatic.com/flutter-canvaskit/b8800d88be4866db1b15f8b954ab2573bba9960f/ --native-null-assertions --no-source-maps -o /workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/1d61ed82029ea48a8becba79555e479d/app.dill --packages=.dart_tool/package_config.json --cfe-only /workspaces/Flutter-Python-Teaching-Template/.dart_tool/flutter_build/1d61ed82029ea48a8becba79555e479d/main.dart
+#0      RunResult.throwException (package:flutter_tools/src/base/process.dart:122:5)
+#1      _DefaultProcessUtils.run (package:flutter_tools/src/base/process.dart:370:19)
+<asynchronous suspension>
+#2      Dart2JSTarget.build (package:flutter_tools/src/build_system/targets/web.dart:203:5)
+<asynchronous suspension>
+#3      _BuildInstance._invokeInternal (package:flutter_tools/src/build_system/build_system.dart:875:9)
+<asynchronous suspension>
+#4      Future.wait.<anonymous closure> (dart:async/future.dart:534:21)
+<asynchronous suspension>
+#5      _BuildInstance.invokeTarget (package:flutter_tools/src/build_system/build_system.dart:813:32)
+<asynchronous suspension>
+#6      Future.wait.<anonymous closure> (dart:async/future.dart:534:21)
+<asynchronous suspension>
+#7      _BuildInstance.invokeTarget (package:flutter_tools/src/build_system/build_system.dart:813:32)
+<asynchronous suspension>
+#8      FlutterBuildSystem.build (package:flutter_tools/src/build_system/build_system.dart:635:16)
+<asynchronous suspension>
+#9      WebBuilder.buildWeb (package:flutter_tools/src/web/compile.dart:92:34)
+<asynchronous suspension>
+#10     BuildWebCommand.runCommand (package:flutter_tools/src/commands/build_web.dart:227:5)
+<asynchronous suspension>
+#11     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1408:27)
+<asynchronous suspension>
+#12     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#13     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:420:9)
+<asynchronous suspension>
+#15     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#16     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:364:5)
+<asynchronous suspension>
+#17     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:130:9)
+<asynchronous suspension>
+#18     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#19     main (package:flutter_tools/executable.dart:93:3)
+<asynchronous suspension>
+
+Compiling lib/main.dart for the Web...                             15.4s
+Error: Failed to compile application for the Web.
