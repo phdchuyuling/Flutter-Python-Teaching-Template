@@ -1,0 +1,1 @@
+ build/web/manifest.json:  /workspaces/Flutter-Python-Teaching-Template/web/index.html /workspaces/Flutter-Python-Teaching-Template/web/manifest.json

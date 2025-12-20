@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flutter App Debug</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #1967D2; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 4px; }
+        .success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .info { background: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+        .error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .app-frame { width: 100%; height: 600px; border: 2px solid #1967D2; margin: 20px 0; border-radius: 4px; }
+        code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✓ Flutter Reversi Game - 黑白棋</h1>
+        
+        <div id="status" class="status info">
+            正在加載應用程式...
+        </div>
+        
+        <div id="app" class="app-frame"></div>
+        
+        <div id="logs" style="background: #f9f9f9; padding: 15px; border-radius: 4px; max-height: 300px; overflow-y: auto; margin-top: 20px;">
+            <strong>調試日誌：</strong>
+            <div id="logContent" style="font-size: 12px; color: #666; margin-top: 10px;">等待日誌...</div>
+        </div>
+    </div>
+
+    <script>
+        const logContent = document.getElementById('logContent');
+        const statusDiv = document.getElementById('status');
+        
+        function addLog(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            logContent.innerHTML += `<div>[${timestamp}] ${message}</div>`;
+            logContent.parentElement.scrollTop = logContent.parentElement.scrollHeight;
+        }
+
+        // 監控控制台日誌
+        const originalLog = console.log;
+        const originalError = console.error;
+        const originalWarn = console.warn;
+
+        console.log = function(...args) {
+            addLog('LOG: ' + args.join(' '));
+            originalLog.apply(console, args);
+        };
+
+        console.error = function(...args) {
+            addLog('<span style="color: red;">ERROR: ' + args.join(' ') + '</span>');
+            originalError.apply(console, args);
+        };
+
+        console.warn = function(...args) {
+            addLog('<span style="color: orange;">WARN: ' + args.join(' ') + '</span>');
+            originalWarn.apply(console, args);
+        };
+
+        // 監控全局錯誤
+        window.addEventListener('error', (event) => {
+            addLog(`<span style="color: red;">UNCAUGHT ERROR: ${event.message} at ${event.filename}:${event.lineno}</span>`);
+            statusDiv.className = 'status error';
+            statusDiv.innerHTML = '❌ 應用程式錯誤: ' + event.message;
+        });
+
+        addLog('頁面加載完成');
+        addLog('檢查 Flutter 加載器...');
+
+        // 檢查 Flutter 是否已加載
+        if (window._flutter) {
+            addLog('✓ Flutter 加載器已檢測到');
+            
+            if (window._flutter.loader) {
+                addLog('✓ Flutter 加載器準備就緒');
+                
+                // 嘗試加載應用
+                window._flutter.loader.load({
+                    onEntrypointLoaded: (engineInitializer) => {
+                        addLog('✓ 應用入口已加載');
+                        statusDiv.className = 'status success';
+                        statusDiv.innerHTML = '✓ 應用程式加載成功！';
+                        
+                        engineInitializer.initializeEngine().then((appRunner) => {
+                            addLog('✓ 引擎已初始化');
+                            appRunner.runApp();
+                            addLog('✓ 應用程式已運行');
+                        }).catch((err) => {
+                            addLog('ERROR 初始化引擎: ' + err);
+                            statusDiv.className = 'status error';
+                            statusDiv.innerHTML = '❌ 初始化失敗: ' + err;
+                        });
+                    }
+                }).catch((err) => {
+                    addLog('ERROR 加載應用: ' + err);
+                    statusDiv.className = 'status error';
+                    statusDiv.innerHTML = '❌ 加載失敗: ' + err;
+                });
+            } else {
+                addLog('❌ Flutter 加載器不可用');
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = '❌ Flutter 加載器未找到';
+            }
+        } else {
+            addLog('❌ Flutter 對象未定義');
+            statusDiv.className = 'status error';
+            statusDiv.innerHTML = '❌ Flutter 框架未加載';
+        }
+
+        // 延遲檢查
+        setTimeout(() => {
+            addLog('檢查應用狀態...');
+            if (document.getElementById('app')) {
+                addLog('應用容器存在');
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
