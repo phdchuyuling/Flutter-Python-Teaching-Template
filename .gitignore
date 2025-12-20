@@ -1,0 +1,15 @@
+# Flutter build files
+bookkeep_new/build/
+bookkeep_new/.dart_tool/
+bookkeep_new/.flutter-plugins
+bookkeep_new/.flutter-plugins-dependencies
+bookkeep_new/pubspec.lock
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
