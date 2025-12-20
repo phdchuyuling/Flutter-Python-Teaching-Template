@@ -1,0 +1,16 @@
+{
+  "name": "Flutter (web) devcontainer",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "postCreateCommand": "flutter --version && flutter pub get || true",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "Dart-Code.flutter",
+    "Dart-Code.dart-code"
+  ]
+}
