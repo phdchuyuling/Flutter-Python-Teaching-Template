@@ -17,11 +17,11 @@ check_git_status_prompt() {
 
     # Check for unpushed commits
     LOCAL=$(git rev-parse @ 2>/dev/null)
-    REMOTE=$(git rev-parse @{u} 2>/dev/null)
+    REMOTE=$(git rev-parse '@{u}' 2>/dev/null)
     
-    if [ $? -eq 0 ] && [ "$LOCAL" != "$REMOTE" ]; then
+    if [ -n "$REMOTE" ] && [ "$LOCAL" != "$REMOTE" ]; then
         # Check if local is ahead
-        if git rev-list --left-only --count @{u}... 2>/dev/null | grep -q "^0$"; then
+        if git rev-list --left-only --count '@{u}'... 2>/dev/null | grep -q "^0$"; then
             echo ""
             echo "⚠️  WARNING: You have UNPUSHED commits! 您有未推送的提交！"
             echo "   Please run: git push"
