@@ -16,6 +16,8 @@ check_git_status_prompt() {
     fi
 
     # Check for unpushed commits
+    # Note: @{u}... means "@{u}...HEAD" (symmetric difference)
+    # --right-only gives commits in HEAD not in @{u} (i.e., unpushed commits)
     LOCAL=$(git rev-parse @ 2>/dev/null)
     REMOTE=$(git rev-parse '@{u}' 2>/dev/null)
     

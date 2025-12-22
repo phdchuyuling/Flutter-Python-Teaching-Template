@@ -15,7 +15,7 @@ if [ -f "${CODESPACE_VSCODE_FOLDER}/.devcontainer/check-git-status.sh" ]; then
 fi
 
 # Show reminder on every prompt (append to existing PROMPT_COMMAND)
-PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND;}check_git_status_prompt"
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND; }check_git_status_prompt"
 EOF
 fi
 
