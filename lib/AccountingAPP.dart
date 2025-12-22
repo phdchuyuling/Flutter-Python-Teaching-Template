@@ -549,9 +549,9 @@ class _BudgetAppState extends State<BudgetApp> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text(
                 '當月總計',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
