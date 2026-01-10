@@ -1,0 +1,12 @@
+{
+  "name": "Flutter-Python-Teaching-Template",
+  "forwardPorts": [8080],
+  "postCreateCommand": "flutter pub get",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dart-code.flutter"
+      ]
+    }
+  }
+}
