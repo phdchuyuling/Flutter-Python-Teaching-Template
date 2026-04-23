@@ -6,11 +6,13 @@ uvicorn[standard]==0.29.0
 Pillow==12.2.0
 opencv-python-headless==4.9.0.80
 numpy==1.26.4
-# rembg <= 2.0.57 has a CORS misconfiguration vulnerability (no patch available).
-# The vulnerability affects rembg's built-in HTTP server (`rembg s` / `rembg b`).
-# We use rembg ONLY as a Python library; its built-in server is never started.
-# Do NOT run `rembg s` or `rembg b` in production.
-rembg==2.0.56
+# rembg is NOT included here.
+# All known versions of rembg (<= 2.0.57) have an unpatched CORS
+# misconfiguration vulnerability (no fix released by upstream).
+# If you need AI background removal, install rembg manually in a controlled
+# environment and review the security implications before deploying:
+#   pip install rembg==2.0.56
+# See: background_remover.py for details.
 # python-multipart >= 0.0.22 required:
 #   CVE: arbitrary file write via non-default configuration (patched in 0.0.22)
 #   CVE: DoS via malformed multipart/form-data boundary (patched in 0.0.18)

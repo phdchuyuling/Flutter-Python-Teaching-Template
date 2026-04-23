@@ -83,6 +83,13 @@ flutter run
 - 一鍵去除背景，輸出透明背景 PNG
 - 模組採延遲載入，未安裝 rembg 時其餘功能仍可正常運作
 
+> ⚠️ **安全警告**：rembg 所有已知版本（≤ 2.0.57）存在未修補的 CORS 設定錯誤漏洞，且目前**無官方修補版本**。  
+> 因此 `rembg` **未包含在 `requirements.txt` 中**，需由使用者在充分評估風險後自行安裝：
+> ```bash
+> pip install rembg==2.0.56
+> ```
+> 未安裝時，`/remove-bg` 端點將回傳 HTTP 503；所有其他功能不受影響。
+
 ### 4. 品質預檢系統（`quality_checker.py`）
 
 | 檢查項目 | 說明 |
@@ -131,7 +138,7 @@ python -m pytest tests/ -v
 - `Pillow` — 圖像處理
 - `opencv-python-headless` — 邊界框偵測
 - `numpy` — 數值計算
-- `rembg` — AI 去背（可選）
+- `rembg` — AI 去背（**可選，需自行安裝**，詳見上方安全警告）
 
 ### Flutter 前端
 - `http` — API 通訊
