@@ -5,6 +5,14 @@ AI-powered background removal using rembg (U2-Net deep learning model).
 
 Provides one-click automatic background removal that converts any image
 into a transparent-background PNG, fulfilling LINE's de-background requirement.
+
+Security note
+-------------
+rembg <= 2.0.57 contains a CORS misconfiguration vulnerability that affects
+its **built-in HTTP server** (invoked via `rembg s` / `rembg b` CLI commands).
+This module uses rembg ONLY as a Python library; the built-in server is never
+started.  Do NOT call `rembg.server` or run `rembg s` / `rembg b` in
+production until an upstream patch is released.
 """
 
 from __future__ import annotations

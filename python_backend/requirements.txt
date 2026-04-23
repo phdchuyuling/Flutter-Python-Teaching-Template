@@ -1,8 +1,18 @@
 fastapi==0.111.0
 uvicorn[standard]==0.29.0
-Pillow==10.3.0
+# Pillow >= 12.2.0 required:
+#   CVE: FITS GZIP decompression bomb (patched in 12.2.0)
+#   CVE: out-of-bounds write loading PSD images (patched in 12.1.1)
+Pillow==12.2.0
 opencv-python-headless==4.9.0.80
 numpy==1.26.4
+# rembg <= 2.0.57 has a CORS misconfiguration vulnerability (no patch available).
+# The vulnerability affects rembg's built-in HTTP server (`rembg s` / `rembg b`).
+# We use rembg ONLY as a Python library; its built-in server is never started.
+# Do NOT run `rembg s` or `rembg b` in production.
 rembg==2.0.56
-python-multipart==0.0.9
+# python-multipart >= 0.0.22 required:
+#   CVE: arbitrary file write via non-default configuration (patched in 0.0.22)
+#   CVE: DoS via malformed multipart/form-data boundary (patched in 0.0.18)
+python-multipart==0.0.22
 aiofiles==23.2.1
